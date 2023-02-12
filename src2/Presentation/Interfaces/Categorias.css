@@ -1,0 +1,62 @@
+body{
+  font-family: Arial, sans-serif;
+  background:no-repeat center top;
+  background-image: url(/src/Imagenes/FondoAvif.jpg);
+  background-size: cover;
+  color: white;
+  
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+
+header.head1 {
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: orange;
+  padding-left: 15px;
+  word-spacing: 100px;
+  
+  
+}
+
+table.table{
+    color:white;
+    margin-left: 50px;
+    margin-top: 30px;
+    
+}
+
+div.cat{
+
+    margin-left: 400px;
+    margin-right: 600px;
+    
+
+}
+
+div.div2{
+
+    text-align: center;
+    background-color:transparent;
+    color:white;
+    margin-left: 400px;
+    margin-right: 600px;
+    margin-top: 20px;
+
+}
+label.dish1{
+
+    padding-right: 30px;
+}
+
+button.but1{
+
+    margin-left: 10px;
+
+}
+
