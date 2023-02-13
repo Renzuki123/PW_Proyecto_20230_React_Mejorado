@@ -7,7 +7,7 @@ import MainPage from './MainPage/MainPage';
 import Req2 from './Req2/Req2';
 import Restaurant from './Restaurantes/restaurant';
 import Estado_pedido from './Restaurantes/estado_pedido';
-import Registro_pedido from './Restaurantes/registro_pedido'
+import Registro_pedido from './Restaurantes/registrar_pedido'
 import './index.css';
 
 

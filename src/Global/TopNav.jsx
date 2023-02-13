@@ -12,7 +12,7 @@ function Elemento(props){
 }
 
 function TopNav(props){
-    const enlaces = ["/", "/Login", "/Login", "req2", "/2023-0-pw-entregable-2/recomendaciones", "/Restaurantes/estado_pedido"]
+    const enlaces = ["/", "/Login", "/Login", "req2", "/", "/Restaurantes/estado_pedido"]
     const textos = ["Inicio", "Register", "Login", "Restaurantes", "Recomendaciones", "Ver Pedidos"]
     const barra = []
 

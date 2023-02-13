@@ -24,7 +24,7 @@ const Restaurant = () => {
 
   return (
     <div>
-      <h1>Menu del Restaurante</h1>
+      <center><h1>Menu del Restaurante</h1></center>
       <div>
         {menu.map((item, index) => (
           <div className = "info-plato" key={item.name}>

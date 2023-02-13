@@ -41,7 +41,7 @@ const Carrito = (props) => {
           </tr>
         </tbody>
       </table>
-      <Link to="/Restaurantes/estado_pedido">
+      <Link to="/Restaurantes/registro_pedido">
         <center><button>Realizar Pedido</button></center>
       </Link>
     </div>
