@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../restaurant.css'
 
 const Carrito = (props) => {
   const [total, setTotal] = useState(0);
@@ -16,8 +17,8 @@ const Carrito = (props) => {
   };
 
   return (
-    <div>
-      <h1>Carrito</h1>
+    <div className='carrito'>
+      <center><h1>Carrito</h1></center>
       <table>
         <thead>
           <tr>
@@ -41,7 +42,7 @@ const Carrito = (props) => {
         </tbody>
       </table>
       <Link to="/Restaurantes/estado_pedido">
-        <button>Realizar Pedido</button>
+        <center><button>Realizar Pedido</button></center>
       </Link>
     </div>
   );

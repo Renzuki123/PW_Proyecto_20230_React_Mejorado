@@ -1,0 +1,44 @@
+.plato-imagen {
+	overflow: hidden;
+}
+
+.plato-imagen img {
+	width: 300px;
+    height: 150px;
+	cursor: pointer;
+}
+
+.info-plato {
+    padding: 50px;
+    width: 40%;
+    background: orange;
+}
+
+.carrito {
+    position: fixed;
+    right: 100px;
+    top: 40px;
+    width: 400px;
+    background-color: orange;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #ffa600;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
