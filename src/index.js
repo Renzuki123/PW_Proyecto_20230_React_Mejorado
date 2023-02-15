@@ -7,7 +7,8 @@ import MainPage from './MainPage/MainPage';
 import Req2 from './Req2/Req2';
 import Restaurant from './Restaurantes/restaurant';
 import Estado_pedido from './Restaurantes/estado_pedido';
-import Registro_pedido from './Restaurantes/registrar_pedido'
+import Registro_pedido from './Restaurantes/registrar_pedido';
+import Recomendaciones from './recomendaciones/Recomendaciones';
 import './index.css';
 
 
@@ -23,6 +24,7 @@ root.render(
         <Route path= '/Restaurantes/estado_pedido' element={ <Estado_pedido/>}/>
         <Route path='/Req2' element = {<Req2/>}/>
         <Route path='/Restaurantes/registro_pedido' element = {<Registro_pedido/>}/>
+        <Route path='/recomendaciones/recomendaciones' element={<Recomendaciones/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
