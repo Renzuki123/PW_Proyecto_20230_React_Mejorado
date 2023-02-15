@@ -64,3 +64,36 @@ code {
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
 }
+
+.card {
+  scroll-snap-align: start;
+  border-radius: 30px;
+  height: 100%;
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3c268b88;
+  margin: 0.5%;
+  padding: 0.5%;
+
+}
+
+.card2 {
+  width: 350px;
+  height: 400px;
+  display: inline-block;
+  margin: 30px;
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #3c268b88;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 0%;
+}
+
+.card2 img {
+  width: 60%;
+  height: 170px;
+  object-fit: cover;
+}

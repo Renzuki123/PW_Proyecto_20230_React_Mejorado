@@ -43,6 +43,7 @@ function Recomendaciones(){
         <h1>Recomendaciones</h1>
         <div className='carrousel'>
             {carrusel}
+            <p>gee</p>
         </div>
     </div>
 }
