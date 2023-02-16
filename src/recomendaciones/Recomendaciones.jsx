@@ -40,7 +40,7 @@ function Recomendaciones(){
     return <div>
         <TopNav category ={4}/>
         <br />
-        <h1>Recomendaciones</h1>
+        <center><h1>Recomendaciones</h1></center>
         <div className='carrousel'>
             {carrusel}
             <p>gee</p>

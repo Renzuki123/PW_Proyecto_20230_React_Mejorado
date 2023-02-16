@@ -51,7 +51,7 @@ const Pedido = ({ pedido }) => {
               <td>{pedido.nombre}</td>
               <td>{pedido.plato}</td>
               <td>{pedido.direccion}</td>
-              <td>{estados[pedido.status]}</td>
+              <td>{pedido.estado}</td>
               <td>{pedido.codigo}</td>
           </tr>
     );
