@@ -49,6 +49,7 @@ const Pedido = ({ pedido }) => {
           <tr>
               <td>{pedido.id}</td>
               <td>{pedido.nombre}</td>
+              <td>{pedido.restaurante}</td>
               <td>{pedido.plato}</td>
               <td>{pedido.direccion}</td>
               <td>{pedido.estado}</td>
@@ -92,6 +93,7 @@ function Estados(){
           <tr>
             <th><h3>ID</h3></th>
             <th><h3>Nombre</h3></th>
+            <th><h3>Restaurante</h3></th>
             <th><h3>Plato</h3></th>
             <th><h3>Direccion</h3></th>
             <th><h3>Estado</h3></th>

@@ -27,7 +27,12 @@
 table {
     width: 100%;
     border-collapse: collapse;
-    
+    color: black;
+    background-color: orange;
+  }
+
+  text{
+    color: "black";
   }
   
   th, td {
