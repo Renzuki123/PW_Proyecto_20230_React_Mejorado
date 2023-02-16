@@ -12,11 +12,11 @@ function Elemento(props){
 }
 
 function TopNav(props){
-    const enlaces = ["/", "/Login", "/Login", "/req2", "/recomendaciones/Recomendaciones", "/Restaurantes/estado_pedido"]
-    const textos = ["Inicio", "Register", "Login", "Restaurantes", "Recomendaciones", "Ver Pedidos"]
+    const enlaces = ["/", "/Login", "/Login", "/req2", "/recomendaciones/Recomendaciones", "/Restaurantes/estado_pedido","req4"]
+    const textos = ["Inicio", "Register", "Login", "Restaurantes", "Recomendaciones", "Ver Pedidos","Platos Por Categoria"]
     const barra = []
 
-    for (let i = 0; i < 6; i++){
+    for (let i = 0; i < textos.length; i++){
         if(i === props.category){
             barra.push(<Elemento current = {true} enlace={enlaces[i]} texto={textos[i]}/>)
         }
