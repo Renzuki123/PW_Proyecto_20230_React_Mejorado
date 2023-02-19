@@ -8,12 +8,22 @@ function RegisterOrderForm() {
   const [addressDetails, setAddressDetails] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // aquí iría la lógica para enviar la información a la API o procesarla de alguna otra manera
-    console.log(`Dirección: ${address}`);
-    console.log(`Detalles de la dirección: ${addressDetails}`);
-    console.log(`Método de pago: ${paymentMethod}`);
+    const response = await fetch("http://localhost:8000/endpoints/registrarPedido/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: new URLSearchParams({
+        names,
+        address,
+        addressDetails,
+        paymentMethod
+      })
+    });
+    const data = await response.json();
+    console.log(data.message); // o data.error si ocurre un error
   };
 
   return (
@@ -70,9 +80,7 @@ function RegisterOrderForm() {
       </div>
 
       <center><div className="boton_registrar">
-        <Link to = "/Restaurantes/estado_pedido">
           <button type="submit">Registrar pedido</button>
-        </Link>
       </div></center>
     </form>
   );

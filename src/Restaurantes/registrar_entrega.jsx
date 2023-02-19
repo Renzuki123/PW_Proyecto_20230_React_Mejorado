@@ -88,7 +88,7 @@ function Registrarentrega(){
     }
      
     return <form>
-      <label>Código de pedido</label>
+      <label>Pin de pedido</label>
       <input type="text" id="code" value={code} onChange={(event) => setCode(event.target.value)}/>
       <button type="button" onClick={handleSubmit}>Buscar Pedido</button>
     </form>
@@ -104,15 +104,15 @@ function Registrarentrega(){
       if (pedido!== "") {
         return <table>
         <tr>
-          <th>Código</th>
+          <th>Cod</th>
           <th>Detalle</th>
-          <th>Código de verificación</th>
+          <th>Pin de verificación</th>
         </tr>
         <tr>
           <th>{pedido.code}</th>
           <th>{pedido.desc}</th>
           <th>{pedido.code_v}</th>
-          <th><button type="submit" onClick={vacio}>Confirmar entrega</button></th>
+          <th><button type="submit" onClick={vacio}>Confirmar la entrega</button></th>
         </tr>
       </table>
       }
@@ -124,7 +124,7 @@ function Registrarentrega(){
   return <div>
     <TopNav category={3}/>
     <br />
-    <h1>Registrar una entrega</h1>
+    <h1>Registrar una entrega de pedido</h1>
     <FormRegistrar/>
     <Tabla/>
   </div>

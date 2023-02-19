@@ -23,7 +23,7 @@ root.render(
         <Route path='/Login' element={ <LoginPage/> } />
         <Route path='/Carrito' element={ <carrito/> } />
         <Route path='/Restaurantes/restaurant' element={ <Restaurant/> } />
-        <Route path= '/Restaurantes/estado_pedido' element={ <Estado_pedido/>}/>
+        <Route path= '/Cliente/estado_pedido' element={ <Estado_pedido/>}/>
 
         <Route path='/Req2' element = {<RESTAURANTES/>}/>
 
