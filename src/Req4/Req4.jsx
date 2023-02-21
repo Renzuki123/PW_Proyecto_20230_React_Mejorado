@@ -1,8 +1,8 @@
 /*El siguiente req se hizo con el apoyo de este video de YT: https://youtu.be/JY7eV4VMeV0*/
 import './Req4.css'
-import data from './data/data';
-import ArticleList from './components4/ArticleList';
-import ButtonList from './components4/ButtonList';
+import data from './data.js';
+import ArticleList from './ArticleList';
+import ButtonList from './ButtonList';
 import { useState } from 'react';
 
 const Req4 = () => {
@@ -18,7 +18,6 @@ const Req4 = () => {
 			setArticles(data)
 			return
 		}
-
         //Filtra todo lo que es article.category de la categoria elegida por el usuario
 		const filteredData = data.filter(article => article.category === category);
 		setArticles(filteredData)
@@ -34,5 +33,4 @@ const Req4 = () => {
         </>
     );
 };
-
 export default Req4;

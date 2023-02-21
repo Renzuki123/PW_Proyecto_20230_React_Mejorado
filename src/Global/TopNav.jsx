@@ -12,8 +12,8 @@ function Elemento(props){
 }
 
 function TopNav(props){
-    const enlaces = ["/", "/Login", "/Login", "/Req2", "/recomendaciones/Recomendaciones", "/Cliente/estado_pedido","/req4"]
-    const textos = ["Inicio", "Register", "Login", "Restaurantes", "Recomendaciones", "Ver Pedidos","Platos Por Categoria"]
+    const enlaces = ["/", "/Login", "/Login", "/Req3", "/recomendaciones/Recomendaciones", "/Cliente/estado_pedido","/Req4"]
+    const textos = ["Inicio", "Register", "Login", "Restaurantes Por Categoría", "Recomendaciones", "Ver Pedidos","Platos Por Categoría"]
     const barra = []
 
     for (let i = 0; i < textos.length; i++){
