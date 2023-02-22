@@ -23,10 +23,12 @@ const Carrito = (props) => {
   const handleRemoveFromCart = (item) => {
     const foundItem = props.cart.find(i => i.name === item.name);
     if (foundItem.quantity === 1) {
-      props.setCart(props.cart.filter(i => i.name !== item.name));
+      const newCart = props.cart.filter(i => i.name !== item.name);
+      props.setCart(newCart);
     } else {
       foundItem.quantity -= 1;
-      props.setCart([...props.cart]);
+      const newCart = [...props.cart];
+      props.setCart(newCart);
     }
   };
 
@@ -47,7 +49,7 @@ const Carrito = (props) => {
             <tr key={item.name}>
               <td>{item.name}</td>
               <td>{item.quantity}</td>
-              <td>{item.price * item.quantity}</td>
+              <td>{item.precio * item.quantity}</td>
               <td><button onClick={() => handleRemoveFromCart(item)}>Eliminar</button></td>
             </tr>
           ))}
