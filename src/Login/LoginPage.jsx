@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import LoginForm from './components/LoginForm';
-import LoginStyle from './components/LoginStyle.css';
+import LoginForm from './LoginForm';
+import './LoginStyle.css';
 
 
 function LoginPage() {
@@ -17,6 +17,7 @@ function LoginPage() {
         password: password,
       }),
     })
+
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -67,6 +68,5 @@ function LoginPage() {
     </div>
   );
 }
-
 export default LoginPage;
 
