@@ -183,14 +183,14 @@ const Restaurant = () => {
     } else {
       setCart([...cart, { ...item, quantity: 1 }]);
     }
-    
-    // Envía la solicitud POST para obtener el total del carrito
+    // Usar newCart en lugar de cart en la solicitud POST
+    const newCart = foundItem ? [...cart] : [...cart, { ...item, quantity: 1 }];
     fetch('http://localhost:8000/endpoints/platosgenericos', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(cart)
+      body: JSON.stringify(newCart)
     })
     .then(response => response.json())
     .then(data => {
@@ -211,23 +211,23 @@ const Restaurant = () => {
         foundItem.quantity -= 1;
         setCart([...cart]);
       }
+      // Usar newCart en lugar de cart en la solicitud POST
+      const newCart = foundItem ? [...cart] : cart.filter(i => i.name !== item.name);
+      fetch('http://localhost:8000/endpoints/platosgenericos', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newCart)
+      })
+      .then(response => response.json())
+      .then(data => {
+        setTotal(data.total);
+      })
+      .catch(error => {
+        console.error('Error fetching total:', error);
+      });
     }
-    
-    // Envía la solicitud POST para obtener el total del carrito
-    fetch('http://localhost:8000/endpoints/platosgenericos', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(cart)
-    })
-    .then(response => response.json())
-    .then(data => {
-      setTotal(data.total);
-    })
-    .catch(error => {
-      console.error('Error fetching total:', error);
-    });
   };
 
   const handleCheckout = () => {

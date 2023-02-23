@@ -18,10 +18,10 @@ function TopNav(props){
 
     for (let i = 0; i < textos.length; i++){
         if(i === props.category){
-            barra.push(<Elemento current = {true} enlace={enlaces[i]} texto={textos[i]}/>)
+            barra.push(<Elemento key={i} current={true} enlace={enlaces[i]} texto={textos[i]} />)
         }
         else{
-            barra.push(<Elemento current = {false} enlace={enlaces[i]} texto={textos[i]}/>)
+            barra.push(<Elemento key={i} current={false} enlace={enlaces[i]} texto={textos[i]} />)
         }
     }
 

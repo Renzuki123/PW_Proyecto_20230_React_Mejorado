@@ -12,7 +12,7 @@ function MainPage(){
         <center><img src={Logo} className="centered" style={{width: "15%"}} alt="logo" /></center>
         <TopNav category={0}/>
 
-        <div class="Ofertas">
+        <div className="Ofertas">
             <center><h2>Our most popular promotions</h2></center>
             <img src={b1} style={{width: "30%"}} alt="referencia" />
             <img src={sb} style={{width: "30%"}} alt="referencia" />

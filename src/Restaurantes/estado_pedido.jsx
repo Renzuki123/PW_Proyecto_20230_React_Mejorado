@@ -90,16 +90,18 @@ function Estados(){
         <br />
         <center><h1>Estado del Pedido</h1></center>
         <table>
-          <tr>
-            <th><h3>ID</h3></th>
-            <th><h3>Nombre</h3></th>
-            <th><h3>Restaurante</h3></th>
-            <th><h3>Plato</h3></th>
-            <th><h3>Direccion</h3></th>
-            <th><h3>Estado</h3></th>
-            <th><h3>Codigo</h3></th>
-          </tr>
-          {filas}
+          <tbody>
+            <tr>
+                <th><h3>ID</h3></th>
+                <th><h3>Nombre</h3></th>
+                <th><h3>Restaurante</h3></th>
+                <th><h3>Plato</h3></th>
+                <th><h3>Direccion</h3></th>
+                <th><h3>Estado</h3></th>
+                <th><h3>Codigo</h3></th>
+            </tr>
+            {filas}
+          </tbody>
         </table>
     </div>
 }
