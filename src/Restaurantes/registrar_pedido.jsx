@@ -2,25 +2,33 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import './restaurant.css'
 
-function RegisterOrderForm() {
-  const [names, setNames] = useState("");
-  const [address, setAddress] = useState("");
-  const [addressDetails, setAddressDetails] = useState("");
-  const [paymentMethod, setPaymentMethod] = useState("");
-
+function RegisterOrderForm(props) {
+  //const total = props.location.state.total;
+  //console.log(props);
+  //console.log(props.location);
+  //console.log(props.location.state);
+  const total = props.location && props.location.state ? props.location.state.total : 0;
+  //const total = props.total;
+  const [nombre, setNombre] = useState("");
+  const [direccion, setDireccion] = useState("");
+  const [detalles, setDetalles] = useState("");
+  const [metodo, setMetodo] = useState("");
+    
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const response = await fetch("http://localhost:8000/endpoints/registrarPedido/", {
+    const pedido = {
+      nombre: nombre,
+      direccion: direccion,
+      detalles: detalles,
+      metodo: metodo,
+      total: total,
+    };
+    const response = await fetch("http://localhost:8000/endpoints/registrar_pedido", {
       method: "POST",
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/json"
       },
-      body: new URLSearchParams({
-        names,
-        address,
-        addressDetails,
-        paymentMethod
-      })
+      body: JSON.stringify(pedido)
     });
     const data = await response.json();
     console.log(data.message); // o data.error si ocurre un error
@@ -36,9 +44,9 @@ function RegisterOrderForm() {
           <label htmlFor="names">Nombres__:</label>
           <input
             type="text"
-            id="names"
-            value={names}
-            onChange={(event) => setNames(event.target.value)}
+            id="nombre"
+            value={nombre}
+            onChange={(event) => setNombre(event.target.value)}
           />
         </div>
       </div>
@@ -48,9 +56,9 @@ function RegisterOrderForm() {
           <label htmlFor="address">Dirección_:</label>
           <input
             type="text"
-            id="address"
-            value={address}
-            onChange={(event) => setAddress(event.target.value)}
+            id="direccion"
+            value={direccion}
+            onChange={(event) => setDireccion(event.target.value)}
           />
         </div>
       
@@ -58,9 +66,9 @@ function RegisterOrderForm() {
           <label htmlFor="addressDetails">Detalles__:</label>
           <input
             type="text"
-            id="addressDetails"
-            value={addressDetails}
-            onChange={(event) => setAddressDetails(event.target.value)}
+            id="detalles"
+            value={detalles}
+            onChange={(event) => setDetalles(event.target.value)}
           />
         </div>
       </div>
@@ -69,9 +77,9 @@ function RegisterOrderForm() {
       <div className="caja">
         <label htmlFor="paymentMethod">Método de pago:</label>
         <select
-          id="paymentMethod"
-          value={paymentMethod}
-          onChange={(event) => setPaymentMethod(event.target.value)}
+          id="metodo"
+          value={metodo}
+          onChange={(event) => setMetodo(event.target.value)}
         >
           <option value="">Seleccione un método de pago</option>
           <option value="cash">Efectivo</option>

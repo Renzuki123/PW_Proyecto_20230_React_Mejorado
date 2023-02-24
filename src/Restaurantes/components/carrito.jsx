@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../restaurant.css'
+import '../restaurant.css';
 
 const Carrito = (props) => {
   const [total, setTotal] = useState(0);
+  console.log("Total:", total);
 
   useEffect(() => {
-    // Usa el total enviado por el backend en lugar de calcularlo localmente
-    setTotal(props.total);
-  }, [props.total]);
+    // Calcula el total localmente
+    const newTotal = props.cart.reduce((acc, item) => {
+      return acc + parseFloat(item.precio) * item.quantity;
+    }, 0);
+    setTotal(newTotal);
+  }, [props.cart]);
 
   const handleAddToCart = (item) => {
     const foundItem = props.cart.find(i => i.name === item.name);
@@ -59,7 +63,7 @@ const Carrito = (props) => {
           </tr>
         </tbody>
       </table>
-      <Link to="/Restaurantes/registro_pedido">
+      <Link to= {{pathname: "/Restaurantes/registro_pedido", state: { total: total }}}>
         <center><button>Realizar Pedido</button></center>
       </Link>
     </div>
