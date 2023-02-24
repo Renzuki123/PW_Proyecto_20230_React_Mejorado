@@ -4,18 +4,24 @@ import './restaurant.css'
 
 function RegisterOrderForm(props) {
   const total = sessionStorage.getItem("total");
+  const detalles = sessionStorage.getItem('detalles');
+  console.log(detalles)
+  typeof detalles === "string" ? console.log("La variable es un string") : console.log("La variable no es un string");
+  //detalles = JSON.parse(detalles) || {};
   //const total = props.location && props.location.state ? props.location.state.total : 0;
   //const total = props.location.state.total;
   const [nombre, setNombre] = useState("");
   const [direccion, setDireccion] = useState("");
-  const [detalles, setDetalles] = useState("");
+  const [referencias, setReferencias] = useState("");
   const [metodo, setMetodo] = useState("");
+  
     
   const handleSubmit = async (event) => {
     event.preventDefault();
     const pedido = {
       nombre: nombre,
       direccion: direccion,
+      referencias: referencias,
       detalles: detalles,
       metodo: metodo,
       total: total,
@@ -60,12 +66,12 @@ function RegisterOrderForm(props) {
         </div>
       
         <div>
-          <label htmlFor="addressDetails">Detalles__:</label>
+          <label htmlFor="addressDetails">Referencias__:</label>
           <input
             type="text"
-            id="detalles"
-            value={detalles}
-            onChange={(event) => setDetalles(event.target.value)}
+            id="referencias"
+            value={referencias}
+            onChange={(event) => setReferencias(event.target.value)}
           />
         </div>
       </div>

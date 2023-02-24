@@ -6,6 +6,7 @@ const Carrito = (props) => {
   const [total, setTotal] = useState(0);
   console.log("Total:", total);
   sessionStorage.setItem("total", total);
+  //sessionStorage.setItem('detalles', JSON.stringify(detalles));
 
   useEffect(() => {
     // Calcula el total localmente
@@ -13,6 +14,14 @@ const Carrito = (props) => {
       return acc + parseFloat(item.precio) * item.quantity;
     }, 0);
     setTotal(newTotal);
+    
+    const detalles = props.cart.reduce((acc, item) => {
+      acc[item.name] = item.quantity;
+      return acc;
+    }, {});
+
+    sessionStorage.setItem('detalles', JSON.stringify(detalles))    
+
   }, [props.cart]);
 
   const handleAddToCart = (item) => {
@@ -64,7 +73,7 @@ const Carrito = (props) => {
           </tr>
         </tbody>
       </table>
-      <Link to= {{pathname: "/Restaurantes/registro_pedido", state: { total: total }}}>
+      <Link to= {{pathname: "/Restaurantes/registro_pedido", state: { total: total}}}>
         <center><button>Realizar Pedido</button></center>
       </Link>
     </div>
