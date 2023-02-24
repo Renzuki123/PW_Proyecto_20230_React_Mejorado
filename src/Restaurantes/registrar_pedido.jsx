@@ -3,12 +3,9 @@ import { Link } from 'react-router-dom';
 import './restaurant.css'
 
 function RegisterOrderForm(props) {
+  const total = sessionStorage.getItem("total");
+  //const total = props.location && props.location.state ? props.location.state.total : 0;
   //const total = props.location.state.total;
-  //console.log(props);
-  //console.log(props.location);
-  //console.log(props.location.state);
-  const total = props.location && props.location.state ? props.location.state.total : 0;
-  //const total = props.total;
   const [nombre, setNombre] = useState("");
   const [direccion, setDireccion] = useState("");
   const [detalles, setDetalles] = useState("");

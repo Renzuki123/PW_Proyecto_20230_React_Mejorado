@@ -5,6 +5,7 @@ import '../restaurant.css';
 const Carrito = (props) => {
   const [total, setTotal] = useState(0);
   console.log("Total:", total);
+  sessionStorage.setItem("total", total);
 
   useEffect(() => {
     // Calcula el total localmente
