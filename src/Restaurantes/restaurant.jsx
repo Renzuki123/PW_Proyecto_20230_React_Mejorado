@@ -10,6 +10,7 @@ const Restaurant = () => {
     fetch('http://localhost:8000/endpoints/platosgenericos')
       .then(response => response.json())
       .then(data => {
+        console.log("ABCDE", data.platos_genericos)
         setMenu(data.platos_genericos);
       })
       .catch(error => {

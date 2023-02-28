@@ -15,14 +15,28 @@ const Carrito = (props) => {
     }, 0);
     setTotal(newTotal);
     
+    /*
     const detalles = props.cart.reduce((acc, item) => {
       acc[item.name] = item.quantity;
       return acc;
     }, {});
-
+    
     sessionStorage.setItem('detalles', JSON.stringify(detalles))    
 
   }, [props.cart]);
+
+  */
+
+  const detalles = props.cart.map(item => {
+    return {
+      id: item.id,
+      nombre: item.name,
+      cantidad: item.quantity
+    }
+  });
+  sessionStorage.setItem('detalles', JSON.stringify(detalles));
+}, [props.cart]);
+
 
   const handleAddToCart = (item) => {
     const foundItem = props.cart.find(i => i.name === item.name);
