@@ -45,7 +45,7 @@ const Req3 = () => {
     }
     return (
         <>
-            <ButtonList categories={categories} filterCategory={filterCategory} />
+            <ButtonList categories={allCategories} filterCategory={filterCategory} />
             <ArticleList articles={articles} />
         </>
     );
