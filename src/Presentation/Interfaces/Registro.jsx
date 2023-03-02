@@ -33,10 +33,10 @@ function Registro() {
         <div>
             <header className="head1">
                 <nav>
-                    <a href="/main">Inicio </a>
-                    <a href="/categorias">Categorías </a>
-                    <a href="/registro">Registro </a>
-                    <a href="/Restaurantes/Ver_pedido">Ordenes </a>
+                    <a href="/PW_Proyecto_20230_React_Mejorado/main">Inicio </a>
+                    <a href="/PW_Proyecto_20230_React_Mejorado/categorias">Categorías </a>
+                    <a href="/PW_Proyecto_20230_React_Mejorado/registro">Registro </a>
+                    <a href="/PW_Proyecto_20230_React_Mejorado/Restaurantes/Ver_pedido">Ordenes </a>
                 </nav>
             </header>
             <div className="div2">

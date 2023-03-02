@@ -28,25 +28,25 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={ <MainPage/> } />
-        <Route path='/Carrito' element={ <carrito/> } />
-        <Route path='/Restaurantes/restaurant' element={ <Restaurant/> } />
-        <Route path= '/Cliente/estado_pedido' element={ <Estado_pedido/>}/>
+        <Route path='/PW_Proyecto_20230_React_Mejorado/' element={ <MainPage/> } />
+        <Route path='/PW_Proyecto_20230_React_Mejorado/Carrito' element={ <carrito/> } />
+        <Route path='/PW_Proyecto_20230_React_Mejorado/Restaurantes/restaurant' element={ <Restaurant/> } />
+        <Route path= '/PW_Proyecto_20230_React_Mejorado/Cliente/estado_pedido' element={ <Estado_pedido/>}/>
 
-        <Route path='/Login' element={ <LoginPage/> } />
-        <Route path='/Req3' element = {<Req3/>}/>
-        <Route path='/Req4' element = {<Req4/>}/>
+        <Route path='/PW_Proyecto_20230_React_Mejorado/Login' element={ <LoginPage/> } />
+        <Route path='/PW_Proyecto_20230_React_Mejorado/Req3' element = {<Req3/>}/>
+        <Route path='/PW_Proyecto_20230_React_Mejorado/Req4' element = {<Req4/>}/>
 
-        <Route path='/Restaurantes/registrar_entrega' element = {<Entrega_pedido/>}/>
-        <Route path='/Cliente/registro_pedido' element = {<Registro_pedido/>}/>
-        <Route path='/recomendaciones/recomendaciones' element={<Recomendaciones/>}/>
-        <Route path='/Restaurantes/Ver_pedido' element = {<Ver_Pedido/>}/>
+        <Route path='/PW_Proyecto_20230_React_Mejorado/Restaurantes/registrar_entrega' element = {<Entrega_pedido/>}/>
+        <Route path='/PW_Proyecto_20230_React_Mejorado/Cliente/registro_pedido' element = {<Registro_pedido/>}/>
+        <Route path='/PW_Proyecto_20230_React_Mejorado/recomendaciones/recomendaciones' element={<Recomendaciones/>}/>
+        <Route path='/PW_Proyecto_20230_React_Mejorado/Restaurantes/Ver_pedido' element = {<Ver_Pedido/>}/>
 
-        <Route path ='/' element={<LoginRest/>}></Route> {/**Esto hará que cargue el loginPage  */}
-        <Route path ='/main' element={<Main/>}></Route>
-        <Route path ='/categorias' element={<Categorias/>}></Route>
-        <Route path ='/ordenes' element={<Ordenes/>}></Route>
-        <Route path ='/registro' element={<Registro/>}></Route>
+        <Route path ='/PW_Proyecto_20230_React_Mejorado/' element={<LoginRest/>}></Route> {/**Esto hará que cargue el loginPage  */}
+        <Route path ='/PW_Proyecto_20230_React_Mejorado/main' element={<Main/>}></Route>
+        <Route path ='/PW_Proyecto_20230_React_Mejorado/categorias' element={<Categorias/>}></Route>
+        <Route path ='/PW_Proyecto_20230_React_Mejorado/ordenes' element={<Ordenes/>}></Route>
+        <Route path ='/PW_Proyecto_20230_React_Mejorado/registro' element={<Registro/>}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
