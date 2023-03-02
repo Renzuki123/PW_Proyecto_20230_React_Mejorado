@@ -14,7 +14,7 @@ return (
                     <h2>{article.title}</h2>
                     <p>{article.description}</p>
                     <div className="article-footer">
-                        <span>{article.date} · {article.category} </span>
+                        <span>{article.category} </span>
                     </div>
                 </div>
             </div>
