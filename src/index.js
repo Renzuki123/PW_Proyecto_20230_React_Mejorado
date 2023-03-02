@@ -29,10 +29,11 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={ <MainPage/> } />
-        <Route path='/Login' element={ <LoginPage/> } />
         <Route path='/Carrito' element={ <carrito/> } />
         <Route path='/Restaurantes/restaurant' element={ <Restaurant/> } />
         <Route path= '/Cliente/estado_pedido' element={ <Estado_pedido/>}/>
+
+        <Route path='/Login' element={ <LoginPage/> } />
         <Route path='/Req3' element = {<Req3/>}/>
         <Route path='/Req4' element = {<Req4/>}/>
 
