@@ -38,7 +38,7 @@ root.render(
         <Route path='/Req4' element = {<Req4/>}/>
 
         <Route path='/Restaurantes/registrar_entrega' element = {<Entrega_pedido/>}/>
-        <Route path='/Restaurantes/registro_pedido' element = {<Registro_pedido/>}/>
+        <Route path='/Cliente/registro_pedido' element = {<Registro_pedido/>}/>
         <Route path='/recomendaciones/recomendaciones' element={<Recomendaciones/>}/>
         <Route path='/Restaurantes/Ver_pedido' element = {<Ver_Pedido/>}/>
 

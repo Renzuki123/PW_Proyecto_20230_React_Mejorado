@@ -14,7 +14,7 @@ function Main(){
                 <a href="/main" >Inicio </a>
                 <a href="/categorias"> Categorías  </a>
                 <a href="/registro"> Registro </a>
-                <a href="/ordenes"> Ordenes </a>
+                <a href="/Restaurantes/Ver_pedido"> Ordenes </a>
               
             </nav>
            

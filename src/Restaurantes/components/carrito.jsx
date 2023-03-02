@@ -87,7 +87,7 @@ const Carrito = (props) => {
           </tr>
         </tbody>
       </table>
-      <Link to= {{pathname: "/Restaurantes/registro_pedido", state: { total: total}}}>
+      <Link to= {{pathname: "/Cliente/registro_pedido", state: { total: total}}}>
         <center><button>Realizar Pedido</button></center>
       </Link>
     </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import TopNav from '../Global/TopNav';
+//import TopNav from '../Global/TopNav';
 import { Link } from 'react-router-dom';
 
 /*
@@ -81,7 +81,14 @@ function EstadoPedido() {
   
   return (
     <div>
-      <TopNav category ={4}/>
+      <header className="head1">
+        <nav>
+          <a href="/main">Inicio </a>
+          <a href="/categorias"> Categorías </a>
+          <a href="/registro"> Registro </a>
+          <a href="/Restaurantes/Ver_pedido"> Ordenes </a>
+        </nav>
+      </header>
       <center><h1>Estado de pedidos</h1></center>
       <table>
         <thead>
@@ -111,10 +118,10 @@ function EstadoPedido() {
               <td>
                 <button
                   onClick={() => {
-                    cambiarEstadoPedido(pedido.id, 'EP');
+                    cambiarEstadoPedido(pedido.id, 'T');
                   }}
                 >
-                  En preparación
+                  Terminado
                 </button>
               </td>
             </tr>
